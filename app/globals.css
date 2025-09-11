@@ -1,0 +1,164 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Samaya Brand Colors */
+  --samaya-navy: #19344f;
+  --samaya-gold: #f4c542;
+  --samaya-teal: #1fbca1;
+  --samaya-blue-gray: #e7eef5;
+  --samaya-bg: #f8fafc;
+  --samaya-text-title: #0f172a;
+  --samaya-text-body: #334155;
+
+  /* Updated theme with Samaya colors */
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --popover: #ffffff;
+  --popover-foreground: #0f172a;
+  --primary: #19344f;
+  --primary-foreground: #ffffff;
+  --secondary: #e7eef5;
+  --secondary-foreground: #19344f;
+  --muted: #e7eef5;
+  --muted-foreground: #64748b;
+  --accent: #f4c542;
+  --accent-foreground: #19344f;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #19344f;
+  --chart-1: #19344f;
+  --chart-2: #f4c542;
+  --chart-3: #1fbca1;
+  --chart-4: #64748b;
+  --chart-5: #94a3b8;
+  --radius: 1rem;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #0f172a;
+  --sidebar-primary: #19344f;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #e7eef5;
+  --sidebar-accent-foreground: #19344f;
+  --sidebar-border: #e2e8f0;
+  --sidebar-ring: #19344f;
+}
+
+.dark {
+  --background: #0f172a;
+  --foreground: #f8fafc;
+  --card: #1e293b;
+  --card-foreground: #f8fafc;
+  --popover: #1e293b;
+  --popover-foreground: #f8fafc;
+  --primary: #f4c542;
+  --primary-foreground: #19344f;
+  --secondary: #334155;
+  --secondary-foreground: #f8fafc;
+  --muted: #334155;
+  --muted-foreground: #94a3b8;
+  --accent: #1fbca1;
+  --accent-foreground: #0f172a;
+  --destructive: #ef4444;
+  --destructive-foreground: #f8fafc;
+  --border: #334155;
+  --input: #334155;
+  --ring: #f4c542;
+  --chart-1: #f4c542;
+  --chart-2: #1fbca1;
+  --chart-3: #64748b;
+  --chart-4: #94a3b8;
+  --chart-5: #cbd5e1;
+  --sidebar: #1e293b;
+  --sidebar-foreground: #f8fafc;
+  --sidebar-primary: #f4c542;
+  --sidebar-primary-foreground: #19344f;
+  --sidebar-accent: #334155;
+  --sidebar-accent-foreground: #f8fafc;
+  --sidebar-border: #334155;
+  --sidebar-ring: #f4c542;
+}
+
+@theme inline {
+  --font-arabic: var(--font-noto-sans-arabic);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-arabic;
+  }
+
+  /* RTL-specific styles */
+  [dir="rtl"] {
+    text-align: right;
+  }
+
+  /* Custom Samaya utilities */
+  .samaya-navy {
+    color: #19344f;
+  }
+
+  .bg-samaya-navy {
+    background-color: #19344f;
+  }
+
+  .samaya-gold {
+    color: #f4c542;
+  }
+
+  .bg-samaya-gold {
+    background-color: #f4c542;
+  }
+
+  .samaya-teal {
+    color: #1fbca1;
+  }
+
+  .bg-samaya-teal {
+    background-color: #1fbca1;
+  }
+}
