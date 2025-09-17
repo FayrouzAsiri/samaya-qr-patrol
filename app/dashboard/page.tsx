@@ -11,7 +11,8 @@ import { StatusChip } from "@/components/ui/status-chip"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts"
 import { RefreshCw, Download, Filter, Calendar, MapPin, Shield, AlertTriangle } from "lucide-react"
-import Link from "next/link"
+import { BrandLogo } from "@/components/ui/brand-logo"
+import { BackButton } from "@/components/ui/back-button"
 
 interface Checkpoint {
   id: string
@@ -69,7 +70,7 @@ export default function DashboardPage() {
       const readyPercentage = scansData.length > 0 ? Math.round((readyScans / scansData.length) * 100) : 0
       const uniqueSchools = new Set(scansData.map((scan: Scan) => scan.checkpoints.school)).size
       const totalScans = scansData.length
-      const missedCheckpoints = checkpointsData.length - new Set(scansData.map((scan: Scan) => scan.checkpoint_id)).size
+      const missedCheckpoints = checkpointsData.length - new Set(scansData.map((scan) => scan.checkpoint_id)).size
 
       setKpiData({
         readyPercentage,
@@ -157,15 +158,10 @@ export default function DashboardPage() {
       <header className="border-b bg-card sticky top-0 z-10">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between flex-wrap gap-4">
+            {/* BackButton and BrandLogo Component */}
             <div className="flex items-center space-x-4 space-x-reverse">
-              <Link href="/" className="flex items-center space-x-2 space-x-reverse">
-                <div className="w-8 h-8 bg-samaya-navy rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">س</span>
-                </div>
-                <div>
-                  <h1 className="text-xl font-bold samaya-navy">لوحة المؤشرات — Samaya QR Patrol</h1>
-                </div>
-              </Link>
+              <BackButton />
+              <BrandLogo className="px-6" />
             </div>
 
             <div className="flex items-center space-x-4 space-x-reverse flex-wrap gap-2">

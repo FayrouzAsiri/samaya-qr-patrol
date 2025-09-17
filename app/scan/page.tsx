@@ -1,7 +1,8 @@
 "use client"
 
 import type React from "react"
-
+import { BrandLogo } from "@/components/ui/brand-logo"
+import { BackButton } from "@/components/ui/back-button"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -83,6 +84,13 @@ export default function ScanPage() {
       <header className="bg-card border-b sticky top-0 z-10">
         <div className="container mx-auto px-4 py-4">
           <div className="text-center">
+            <div className="flex justify-start mb-2">
+              <BackButton />
+            </div>
+            {/* BrandLogo component added to scan page header */}
+            <div className="flex justify-center mb-3">
+              <BrandLogo size="sm" className="px-6" />
+            </div>
             <div className="text-xs text-muted-foreground mb-1">
               سامايا <ArrowRight className="inline h-3 w-3 mx-1" /> {checkpointData.school}{" "}
               <ArrowRight className="inline h-3 w-3 mx-1" /> {checkpointData.checkpoint}
