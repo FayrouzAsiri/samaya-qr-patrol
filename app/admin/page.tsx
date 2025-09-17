@@ -11,8 +11,9 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
 import { Badge } from "@/components/ui/badge"
 import { Plus, Filter, Copy, Eye, EyeOff, QrCode, Printer, RefreshCw, ChevronLeft, ChevronRight } from "lucide-react"
-import Link from "next/link"
 import { QRCodeGenerator } from "@/components/ui/qr-code-generator"
+import { BrandLogo } from "@/components/ui/brand-logo"
+import { BackButton } from "@/components/ui/back-button"
 
 // Interfaces for type safety
 interface Checkpoint {
@@ -146,16 +147,10 @@ export default function AdminPage() {
       <header className="border-b bg-card">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between flex-wrap gap-4">
+            {/* BrandLogo Component */}
             <div className="flex items-center space-x-4 space-x-reverse">
-              <Link href="/" className="flex items-center space-x-2 space-x-reverse">
-                <div className="w-8 h-8 bg-samaya-navy rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">س</span>
-                </div>
-                <div>
-                  <h1 className="text-xl font-bold samaya-navy">إدارة النقاط وملصقات QR</h1>
-                  <p className="text-sm text-muted-foreground">Checkpoints & QR Management</p>
-                </div>
-              </Link>
+              <BackButton />
+              <BrandLogo className="px-6" />
             </div>
 
             <div className="flex items-center space-x-4 space-x-reverse">

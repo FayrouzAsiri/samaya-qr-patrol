@@ -1,91 +1,88 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
-
+/* CSS variables theme tokens */
 :root {
   /* Samaya Brand Colors */
-  --samaya-navy: #19344f;
-  --samaya-gold: #f4c542;
-  --samaya-teal: #1fbca1;
-  --samaya-blue-gray: #e7eef5;
-  --samaya-bg: #f8fafc;
-  --samaya-text-title: #0f172a;
-  --samaya-text-body: #334155;
+  --samaya-navy: 25 52 79;
+  --samaya-gold: 244 197 66;
+  --samaya-teal: 31 188 161;
+  --samaya-blue-gray: 231 238 245;
+  --samaya-bg: 248 250 252;
 
   /* Updated theme with Samaya colors */
-  --background: #f8fafc;
-  --foreground: #0f172a;
-  --card: #ffffff;
-  --card-foreground: #0f172a;
-  --popover: #ffffff;
-  --popover-foreground: #0f172a;
-  --primary: #19344f;
-  --primary-foreground: #ffffff;
-  --secondary: #e7eef5;
-  --secondary-foreground: #19344f;
-  --muted: #e7eef5;
-  --muted-foreground: #64748b;
-  --accent: #f4c542;
-  --accent-foreground: #19344f;
-  --destructive: #ef4444;
-  --destructive-foreground: #ffffff;
-  --border: #e2e8f0;
-  --input: #e2e8f0;
-  --ring: #19344f;
-  --chart-1: #19344f;
-  --chart-2: #f4c542;
-  --chart-3: #1fbca1;
-  --chart-4: #64748b;
-  --chart-5: #94a3b8;
-  --radius: 1rem;
-  --sidebar: #ffffff;
-  --sidebar-foreground: #0f172a;
-  --sidebar-primary: #19344f;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #e7eef5;
-  --sidebar-accent-foreground: #19344f;
-  --sidebar-border: #e2e8f0;
-  --sidebar-ring: #19344f;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
 }
 
 .dark {
-  --background: #0f172a;
-  --foreground: #f8fafc;
-  --card: #1e293b;
-  --card-foreground: #f8fafc;
-  --popover: #1e293b;
-  --popover-foreground: #f8fafc;
-  --primary: #f4c542;
-  --primary-foreground: #19344f;
-  --secondary: #334155;
-  --secondary-foreground: #f8fafc;
-  --muted: #334155;
-  --muted-foreground: #94a3b8;
-  --accent: #1fbca1;
-  --accent-foreground: #0f172a;
-  --destructive: #ef4444;
-  --destructive-foreground: #f8fafc;
-  --border: #334155;
-  --input: #334155;
-  --ring: #f4c542;
-  --chart-1: #f4c542;
-  --chart-2: #1fbca1;
-  --chart-3: #64748b;
-  --chart-4: #94a3b8;
-  --chart-5: #cbd5e1;
-  --sidebar: #1e293b;
-  --sidebar-foreground: #f8fafc;
-  --sidebar-primary: #f4c542;
-  --sidebar-primary-foreground: #19344f;
-  --sidebar-accent: #334155;
-  --sidebar-accent-foreground: #f8fafc;
-  --sidebar-border: #334155;
-  --sidebar-ring: #f4c542;
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
 }
 
 @theme inline {
-  --font-arabic: var(--font-noto-sans-arabic);
+  /* optional: --font-sans, --font-serif, --font-mono if they are applied in the layout.tsx */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -129,36 +126,51 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground font-arabic;
+    @apply bg-background text-foreground;
   }
+}
 
-  /* RTL-specific styles */
-  [dir="rtl"] {
-    text-align: right;
-  }
+html,
+body,
+:root {
+  height: 100%;
+}
+body {
+  background-color: rgb(var(--background));
+  color: rgb(var(--foreground));
+  font-family: var(--font-sans, system-ui);
+}
 
-  /* Custom Samaya utilities */
-  .samaya-navy {
-    color: #19344f;
-  }
+/* RTL-specific styles */
+[dir="rtl"] {
+  text-align: right;
+}
 
-  .bg-samaya-navy {
-    background-color: #19344f;
-  }
+/* Custom Samaya utilities */
+.samaya-navy {
+  color: rgb(var(--samaya-navy));
+}
 
-  .samaya-gold {
-    color: #f4c542;
-  }
+.bg-samaya-navy {
+  background-color: rgb(var(--samaya-navy));
+}
 
-  .bg-samaya-gold {
-    background-color: #f4c542;
-  }
+.samaya-gold {
+  color: rgb(var(--samaya-gold));
+}
 
-  .samaya-teal {
-    color: #1fbca1;
-  }
+.bg-samaya-gold {
+  background-color: rgb(var(--samaya-gold));
+}
 
-  .bg-samaya-teal {
-    background-color: #1fbca1;
-  }
+.samaya-teal {
+  color: rgb(var(--samaya-teal));
+}
+
+.bg-samaya-teal {
+  background-color: rgb(var(--samaya-teal));
+}
+
+.font-headings {
+  font-family: var(--font-headings, var(--font-sans, system-ui));
 }

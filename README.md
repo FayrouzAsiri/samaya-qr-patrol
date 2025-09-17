@@ -1,30 +1,12 @@
-# Samaya QR Patrol UI
+# Samaya QR Patrol — Next 15 / React 19 Scaffold
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+## Getting Started
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/fayrouzasiris-projects/v0-samaya-qr-patrol-ui)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/projects/Zmc86BlapYi)
+1. Clean + install
 
-## Overview
+```powershell
+if (Test-Path .\node_modules) { Remove-Item -Recurse -Force .\node_modules }
+if (Test-Path .\package-lock.json) { Remove-Item -Force .\package-lock.json }
+npm cache clean --force
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
-
-## Deployment
-
-Your project is live at:
-
-**[https://vercel.com/fayrouzasiris-projects/v0-samaya-qr-patrol-ui](https://vercel.com/fayrouzasiris-projects/v0-samaya-qr-patrol-ui)**
-
-## Build your app
-
-Continue building your app on:
-
-**[https://v0.app/chat/projects/Zmc86BlapYi](https://v0.app/chat/projects/Zmc86BlapYi)**
-
-## How It Works
-
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+npm install
